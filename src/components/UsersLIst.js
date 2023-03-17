@@ -1,31 +1,65 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../store";
+import { fetchUsers, addUser } from "../store";
+import Button from './Button';
 import Skeleton from "./Skeleton";
 
 function UsersList() {
 
+    const [isLoadingUsers, setIsLoadingUsers] = useState(false);
+    const [loadingUsersError, setLoadingUsersError] = useState(null);
+    const [isCreatingUser, setIsCreatingUser] = useState(false);
+    const [creatingUserError, setCreatingUserError] = useState(null);
+
     const dispatch = useDispatch();
 
-    const {data, isLoading, error} = useSelector((state) => {
+    const { data } = useSelector((state) => {
         return state.users;
     })
 
     useEffect(() => {
-        dispatch(fetchUsers());
+        setIsLoadingUsers(true);
+        dispatch(fetchUsers())
+            .unwrap()
+            .catch(err => setLoadingUsersError(err))
+            .finally(() => setIsLoadingUsers(false));
     }, [dispatch]);
 
-    if (isLoading) { 
+    const handleUserAdd = () => {
+        setIsCreatingUser(true);
+        dispatch(addUser())
+            .unwrap()
+            .catch(err => setCreatingUserError(err))
+            .finally(() => setIsCreatingUser(false))
+    };
+
+    if (isLoadingUsers) {
         return <Skeleton times={6} className="h-10 w-full" />
     }
 
-    if (error) {
+    if (loadingUsersError) {
         return <div>Error fetching data</div>
     }
-    return <div>
-        {data.length}
-    </div>
 
+    const renderedUsers = data.map((user) => {
+        return <div key={user.id} className="mb-3 border rounded">
+            <div className="flex p-2 justify-between items-center cursor-pointer">
+                {user.name}
+            </div>
+        </div>
+    })
+
+    return <div>
+        <div className="flex flex-row justify-between m-3">
+            <h1 className="m-2 text-xl">Users</h1>
+            {
+                isCreatingUser ? ('Creating user...')
+                :(<Button onClick={handleUserAdd}>+ Add User</Button>)
+            }
+            { creatingUserError && 'Error creating user!'}
+        </div>
+        {renderedUsers}
+    </div>;
 
 }
 

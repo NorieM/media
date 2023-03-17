@@ -1,10 +1,38 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "Myra"
-        }
-    ],
-    "albums": [],
-    "photos": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Myra"
+    },
+    {
+      "name": "Debbie Maggio",
+      "id": 2
+    },
+    {
+      "name": "Elizabeth Marks",
+      "id": 3
+    },
+    {
+      "name": "Muriel Russel I",
+      "id": 4
+    },
+    {
+      "name": "Katherine Hammes",
+      "id": 5
+    },
+    {
+      "name": "Daniel Fahey",
+      "id": 6
+    },
+    {
+      "name": "Malcolm Hills",
+      "id": 7
+    },
+    {
+      "name": "Misty Welch III",
+      "id": 8
+    }
+  ],
+  "albums": [],
+  "photos": []
 }

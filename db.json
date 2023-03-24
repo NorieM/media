@@ -13,6 +13,12 @@
       "id": 19
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Going Down",
+      "userId": 2
+    }
+  ],
   "photos": []
 }

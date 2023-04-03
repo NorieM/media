@@ -15,36 +15,6 @@
   ],
   "albums": [
     {
-      "id": 10,
-      "title": "Going Down",
-      "userId": 2
-    },
-    {
-      "userId": 2,
-      "title": "Licensed Steel Pants",
-      "id": 11
-    },
-    {
-      "userId": 2,
-      "title": "Unbranded Metal Chair",
-      "id": 12
-    },
-    {
-      "userId": 2,
-      "title": "Unbranded Cotton Chair",
-      "id": 13
-    },
-    {
-      "userId": 2,
-      "title": "Practical Soft Ball",
-      "id": 14
-    },
-    {
-      "userId": 18,
-      "title": "Practical Bronze Salad",
-      "id": 15
-    },
-    {
       "userId": 19,
       "title": "Licensed Cotton Cheese",
       "id": 16
@@ -53,6 +23,56 @@
       "userId": 19,
       "title": "Rustic Concrete Towels",
       "id": 17
+    },
+    {
+      "userId": 18,
+      "title": "Small Steel Shoes",
+      "id": 18
+    },
+    {
+      "userId": 18,
+      "title": "Practical Soft Pants",
+      "id": 19
+    },
+    {
+      "userId": 19,
+      "title": "Gorgeous Cotton Hat",
+      "id": 20
+    },
+    {
+      "userId": 2,
+      "title": "Rustic Fresh Salad",
+      "id": 21
+    },
+    {
+      "userId": 2,
+      "title": "Rustic Soft Tuna",
+      "id": 22
+    },
+    {
+      "userId": 2,
+      "title": "Luxurious Bronze Bike",
+      "id": 23
+    },
+    {
+      "userId": 2,
+      "title": "Generic Granite Mouse",
+      "id": 24
+    },
+    {
+      "userId": 2,
+      "title": "Luxurious Soft Cheese",
+      "id": 25
+    },
+    {
+      "userId": 2,
+      "title": "Tasty Bronze Cheese",
+      "id": 26
+    },
+    {
+      "userId": 18,
+      "title": "Recycled Frozen Table",
+      "id": 27
     }
   ],
   "photos": []

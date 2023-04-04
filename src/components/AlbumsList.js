@@ -18,7 +18,7 @@ function AlbumsList({ user }) {
         content = <div>Error loading albums</div>
     } else {
         content = data.map(album => {
-            return <AlbumsListItem key={album.id} album={album}/>
+            return <AlbumsListItem key={album.id} album={album} />
         });
     }
 
